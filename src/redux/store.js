@@ -6,15 +6,15 @@ import {
   specialityReducer, 
   courseReducer, 
   teacherReducer,
-  classReducer
+  workshopReducer
 } from "./reducers"
 export default createStore(
-  combineReducers(
+  combineReducers({
     postReducer, 
     specialityReducer, 
     courseReducer, 
     teacherReducer, 
-    classReducer
-    ),
+    workshopReducer
+  }),
   composeWithDevTools(applyMiddleware(thunk))
 )

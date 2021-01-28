@@ -1,3 +1,4 @@
+import Axios from "axios"
 import {
    GET_ALL_COURSES, 
    GET_ALL_POSTS, 
@@ -54,7 +55,7 @@ export const getAllTeachers = () => dispatch => {
 
 /*-----------------------FOR A POST -----------------*/
 
-export const getPost = () => dispatch => {
+export const getPost = id => dispatch => {
   Axios.get(`${API_URL}/posts/${id}`)
   .then(resp => {
       return dispatch({
@@ -64,7 +65,7 @@ export const getPost = () => dispatch => {
     }
   )
 }
-export const getSpecialitiy = () => dispatch => {
+export const getSpecialitiy = id => dispatch => {
   Axios.get(`${API_URL}/speciality/${id}`)
   .then(resp => {
       return dispatch({
@@ -74,7 +75,7 @@ export const getSpecialitiy = () => dispatch => {
     }
   )
 }
-export const getCourse = () => dispatch => {
+export const getCourse = id => dispatch => {
   Axios.get(`${API_URL}/course/${id}`)
   .then(resp => {
       return dispatch({
@@ -85,7 +86,7 @@ export const getCourse = () => dispatch => {
   )
 }
 
-export const getWorkshop = () => dispatch => {
+export const getWorkshop = id => dispatch => {
   Axios.get(`${API_URL}/class /${id}`)
   .then(resp => {
       return dispatch({

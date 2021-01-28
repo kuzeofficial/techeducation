@@ -1,5 +1,5 @@
 {
-  "especialidades": [
+  "specialities": [
     {
       "id": 1,
       "name": "Especialidad en React"
@@ -9,7 +9,7 @@
       "name": "Especialidad en Javascript"
     }
   ],
-  "cursos": [
+  "courses": [
     {
       "id": 1,
       "name": "React desde cero"
