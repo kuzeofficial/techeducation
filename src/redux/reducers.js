@@ -15,12 +15,12 @@ export const postReducer = (state = {}, action) => {
       ...state,
       posts: action.posts
     }
+  }
   if (action.type === GET_POST){
     return{
       ...state,
       post: action.post
     }
-  }
   } 
   return state
 }
