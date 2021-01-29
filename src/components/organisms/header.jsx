@@ -1,6 +1,10 @@
-import React from 'react'
+import React, {createRef} from 'react'
 import { NavLink } from 'react-router-dom'
 import Logo from "../../assets/images/logo.png"
+
+const menu = createRef()
+const toggleMenu = () => menu.current.classList.toggle('show')
+
 const Header = () => {
   return (
       <header className="main-header">
@@ -15,7 +19,7 @@ const Header = () => {
             </NavLink>
           </div>
           <div className="s-cols-1 lg-cols-3 s-cross-center s-main-end">
-            <nav className="main-menu">
+            <nav className="main-menu" ref={menu}>
               <ul>
                 <li><NavLink to="/">Home</NavLink></li>
                 <li><NavLink to="/specialities">Specialities</NavLink></li>
@@ -23,6 +27,9 @@ const Header = () => {
                 <li><NavLink to="/teachers">Teachers</NavLink></li>
               </ul>
             </nav>
+            <div className="main-menu-toggle to-l" onClick={() => toggleMenu()}>
+              
+            </div>
           </div>
         </div>
       </header>
