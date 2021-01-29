@@ -14,12 +14,14 @@ import Page404 from "./pages/page404"
 // ROUTER COMPONENT IMPORT 
 import Protected from './routes/protected'
 import Public from './routes/public'
-
+//IMPORT COMPONENTS
+import Header from "./organisms/header"
 
 
 const App = () => {
   return (
     <Router>
+      <Header />
       <Switch>
         <Protected path="/" exact component={Home} />
         <Protected path="/specialities" exact component={Specialities} />
