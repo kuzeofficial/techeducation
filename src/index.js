@@ -4,9 +4,7 @@ import App from './components/App.jsx'
 import "./styles/styles.scss"
 import store from "./redux/store"
 import { Provider } from "react-redux"
-import { getAllSpecialities } from "./redux/actionCreators.js"
 
-store.dispatch(getAllSpecialities())
 
 ReactDOM.render(
   <Provider store={store}>

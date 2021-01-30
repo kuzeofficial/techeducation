@@ -1,5 +1,6 @@
 import React from 'react'
 import Axios from 'axios'
+import { Link } from 'react-router-dom'
 
 const authentication = e => {
   e.preventDefault()
@@ -8,9 +9,12 @@ const authentication = e => {
     "email": form.email.value,
     "password": form.password.value
   }
-  Axios.post("https://api-edteam.alejogs4.now.sh/login", data)
-  .then(r => console.log(r))
-  .catch(e => console.log(e))
+  Axios.post("http://chuly-api.herokuapp.com/api/signin", data)
+  .then(r => {
+    localStorage.setItem('token', r.data.token)
+    window.location = "/"
+  })
+  .catch(e => console.log(e.r))
 }
 
 
@@ -53,6 +57,9 @@ const Login = () => {
             <input type="submit" className="button full" value="Log in" />
           </div>
         </form>
+        <div className="center">
+          <p> You do not have an account? <Link to="/register">Create Account</Link></p>
+        </div>
       </div>
     </div>
   )
