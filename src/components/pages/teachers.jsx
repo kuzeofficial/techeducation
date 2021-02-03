@@ -3,7 +3,7 @@ import Banner from "../organisms/banner"
 import store from "../../redux/store"
 import {getAllTeachers} from "../../redux/actionCreators"
 import {connect} from "react-redux"
-
+import Teacher from "../organisms/teacher"
 
 const Teachers = ({ match , teachers}) => {
   
@@ -27,17 +27,11 @@ const Teachers = ({ match , teachers}) => {
         <main className="ed-grid m-grid-3 lg-grid-4 row-gap">
         {
           teachers.map(t => (
-            <article key={t.id}>
-              <div className="s-px-4">
-                <div className="img-container circle s-mb-2">
-                  <img src={t.photo} alt={t.name}/>
-                </div>
-              </div>
-              <div className="s-center">
-                <p className="t3 s-mb-1">{t.name}</p>
-                <p>{t.country}</p>
-              </div>
-            </article>
+              <Teacher 
+                photo={t.photo}
+                name={t.name}
+                country={t.country}
+              />
           ))
         }
       </main>  
