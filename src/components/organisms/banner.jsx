@@ -15,8 +15,8 @@ const Banner = ({ color, image, title, subtitle, home }) => {
                 <p>{subtitle}</p>
                 <Link to="/courses/601aae7604359e00042a69b5" className="button third-color"> Watch </Link>
               </div>
-              <div className="img-container s-ratio-16-9">
-                <img src="https://www.rocketlab.com.au/wp-content/uploads/2017/01/graphql-banner.png" alt="Course Now" />
+              <div className="img-container s-ratio-12-6">
+                <img className="s-radius-1" src="https://www.rocketlab.com.au/wp-content/uploads/2017/01/graphql-banner.png" alt="Course Now" />
               </div>
             </div>
             :

@@ -3,7 +3,7 @@ import {Link} from "react-router-dom"
 const Card = ({ photo, name, subtitle, cardId, path}) => {
   return (
     <article className="card s-border">
-      <div className="img-container s-ratio-16-9">
+      <div className="img-container s-ratio-16-9 s-radius-tl-1 s-radius-tr-1">
         <Link to={`/${path}/${cardId}`}>
           <img src={photo} alt={name}/>
         </Link>

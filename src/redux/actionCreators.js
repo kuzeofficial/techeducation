@@ -97,4 +97,5 @@ export const getWorkshop = id => dispatch => {
   )
 }
 
+export default getAllPosts
 
